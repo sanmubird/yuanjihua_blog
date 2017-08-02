@@ -8,7 +8,7 @@ import org.apache.shiro.config.IniSecurityManagerFactory;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.util.Factory;
 
-public class shiroUtils {
+public class ShiroUtils {
 	private static Subject subject;
 	/**
 	 *  初始化shiro数据库配置
