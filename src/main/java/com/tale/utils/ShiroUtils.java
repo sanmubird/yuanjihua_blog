@@ -14,6 +14,19 @@ public class ShiroUtils {
 	 *  初始化shiro数据库配置
 	 */
 	public static void shiroUtils(){
+		/*另一种自定义realm的方式：
+		设置Realm
+		DruidDataSource ds = new DruidDataSource();
+		ds.setDriverClassName("com.mysql.jdbc.Driver");
+		ds.setUrl("jdbc:mysql://localhost:3306/shiro");
+		ds.setUsername("root");
+		ds.setPassword("");
+
+		JdbcRealm jdbcRealm = new JdbcRealm();
+		jdbcRealm.setDataSource(ds);
+		jdbcRealm.setPermissionsLookupEnabled(true);
+		securityManager.setRealms(Arrays.asList((Realm) jdbcRealm));*/
+
 		//1、获取SecurityManager工厂，此处使用Ini配置文件初始化SecurityManager
         Factory<org.apache.shiro.mgt.SecurityManager> factory =
                 new IniSecurityManagerFactory("classpath:shiro-jdbc-realm.ini");

@@ -57,7 +57,7 @@ public final class TaleJdbc {
             if (!isNull(db_host) && !isNull(db_name)) {
                 String username = props.get("db_user").toString();
                 String password = props.get("db_pass").toString();
-                String url = "jdbc:mysql://" + db_host + "/" + db_name + "?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull";
+                String url = "jdbc:mysql://" + db_host + "/" + db_name + "?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false";
                 put("url", url);
                 put("username", username);
                 put("password", password);
